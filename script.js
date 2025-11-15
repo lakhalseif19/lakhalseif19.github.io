@@ -113,21 +113,15 @@ function handleImageError(img) {
     console.log('Image failed to load:', img.src);
     // Fallback images based on project type
     const fallbackImages = {
-        'tp1': 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        'tp2': 'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        'tp3': 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        'tp4': 'https://images.unsplash.com/photo-1614732414444-096e5f1122d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+        'tpi': 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        'tp2': 'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     };
     
     // Determine which fallback to use based on image src
-    if (img.src.includes('tp1')) {
-        img.src = fallbackImages.tp1;
+    if (img.src.includes('tpi')) {
+        img.src = fallbackImages.tpi;
     } else if (img.src.includes('tp2')) {
         img.src = fallbackImages.tp2;
-    } else if (img.src.includes('tp3')) {
-        img.src = fallbackImages.tp3;
-    } else if (img.src.includes('tp4')) {
-        img.src = fallbackImages.tp4;
     } else {
         img.src = 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
     }
@@ -197,7 +191,8 @@ function initializeTPActions() {
         btn.addEventListener('click', function() {
             const repoName = this.getAttribute('data-repo');
             const projectName = this.getAttribute('data-project');
-            downloadProject(repoName, projectName);
+            const zipUrl = this.getAttribute('data-zip');
+            downloadProject(repoName, projectName, zipUrl);
         });
     });
     
@@ -382,12 +377,23 @@ function closeRender() {
 }
 
 // Project Download Functions
-function downloadProject(repoName, projectName) {
-    // Since we're using GitHub Pages, we can provide direct links to the folders
-    const folderUrl = `https://github.com/lakhalseif19/lakhalseif19.github.io/tree/main/${repoName}`;
+function downloadProject(repoName, projectName, zipUrl) {
+    showNotification(`Downloading ${projectName}...`, 'info');
     
-    showNotification(`Opening ${projectName} folder on GitHub...`, 'info');
-    window.open(folderUrl, '_blank');
+    // Create a temporary link to trigger the download
+    const link = document.createElement('a');
+    link.href = zipUrl;
+    link.download = `${projectName}.blend`;
+    
+    // Append to the document, click it, and remove it
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    // Show success notification after a short delay
+    setTimeout(() => {
+        showNotification(`${projectName} download started!`, 'success');
+    }, 1000);
 }
 
 function viewReport(repoName, projectName, fileUrl) {
