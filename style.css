@@ -401,23 +401,7 @@ body {
     }
 }
 
-@keyframes words {
-    0%, 20% {
-        content: '3D Artist';
-    }
-    21%, 40% {
-        content: 'Blender Specialist';
-    }
-    41%, 60% {
-        content: '3D Modeler';
-    }
-    61%, 80% {
-        content: 'Motion Designer';
-    }
-    81%, 100% {
-        content: 'Digital Creator';
-    }
-}
+
 
 @keyframes typing {
     10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {

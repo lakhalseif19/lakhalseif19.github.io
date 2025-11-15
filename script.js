@@ -132,7 +132,7 @@ function initTextAnimation() {
     const textAnimation = document.querySelector('.text-animation span');
     if (!textAnimation) return;
     
-    const professions = ['Frontend Developer', '3D Designer', 'UI/UX Designer', 'Blender Artist'];
+    const professions = ["Frontend Developer", "3D Designer", "UI/UX Designer"];
     let currentProfession = 0;
     let currentChar = 0;
     let isDeleting = false;
