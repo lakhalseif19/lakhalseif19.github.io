@@ -113,13 +113,13 @@ function handleImageError(img) {
     console.log('Image failed to load:', img.src);
     // Fallback images based on project type
     const fallbackImages = {
-        'tpi': 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        'tp1': 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
         'tp2': 'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     };
     
     // Determine which fallback to use based on image src
-    if (img.src.includes('tpi')) {
-        img.src = fallbackImages.tpi;
+    if (img.src.includes('tp1')) {
+        img.src = fallbackImages.tp1;
     } else if (img.src.includes('tp2')) {
         img.src = fallbackImages.tp2;
     } else {
