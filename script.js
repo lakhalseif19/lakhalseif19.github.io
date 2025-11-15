@@ -531,3 +531,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function optimizeImageQuality(img) {
+    // Préchargement et optimisation
+    img.loading = 'eager';
+    img.decoding = 'sync';
+    img.fetchPriority = 'high';
+    
+    // Si l'image est floue, on tente de recharger une version HD
+    img.onload = function() {
+        if (this.naturalWidth < 500) {
+            console.warn('Image de faible qualité détectée');
+            // Charger une version HD si disponible
+            const hdSrc = this.src.replace('.jpg', '-hd.jpg');
+            const hdImage = new Image();
+            hdImage.src = hdSrc;
+        }
+    };
+}
+
+// Appliquer à toutes les images de profil
+document.querySelectorAll('.profile-image').forEach(optimizeImageQuality);
