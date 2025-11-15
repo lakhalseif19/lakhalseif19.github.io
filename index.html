@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Seif El Islam - Frontend & 3D Designer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Page Transition Overlay -->
+    <div class="page-transition-overlay"></div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <a href="#home" class="logo">Seif <span>El Islam</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#tps" class="nav-link">Practical Works</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section home active">
+        <div class="home-content">
+            <h1>Hi, I'm <span>Seif</span></h1>
+            <h3 class="text-animation">I'm a <span></span></h3>
+            <p>Frontend Developer and Designer with strong expertise in modern web technologies and visual design. I create engaging user interfaces, responsive layouts, and intuitive digital experiences. Skilled in integrating AI models and developing Python-based solutions, I blend creativity with technical precision to deliver smart, efficient, and visually refined products.</p>
+            
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/seif-el-islam-lakhal-4b1b4b1b4/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/lakhalseif19" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/seif_el_islam_lakhal/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://twitter.com/seif_el_islam" target="_blank"><i class='bx bxl-twitter'></i></a>
+            </div>
+            
+            <div class="btn-group">
+                <a href="#contact" class="btn">Hire Me</a>
+                <a href="#tps" class="btn">View My Work</a>
+            </div>
+        </div>
+        
+        <div class="home-img">
+            <div class="image-container">
+                <div class="image-placeholder">
+                    <i class="fas fa-user"></i>
+                    <p>Your Photo Here</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practical Works Section -->
+    <section id="tps" class="section tps-section">
+        <div class="heading-container">
+            <h2 class="heading">My <span>Practical Works</span></h2>
+            <p class="services-subtitle">Professional 3D modeling and design projects showcasing my expertise in Blender and digital creation</p>
+        </div>
+        
+        <div class="tps-scroll-container">
+            <div class="tps-grid">
+                <!-- TP 1 - Table -->
+                <div class="tp-card">
+                    <div class="tp-header">
+                        <div class="tp-number">TP 1</div>
+                        <div class="tp-badge">Table Design</div>
+                    </div>
+                    <div class="tp-image">
+                        <img src="https://raw.githubusercontent.com/lakhalseif19/lakhalseif19.github.io/main/tp1/tablerender.png" alt="Modern Table Design" onerror="handleImageError(this)">
+                    </div>
+                    <div class="tp-content">
+                        <h3>Modern Table Design</h3>
+                        <p>Professional table modeling with realistic materials and advanced lighting setup in Blender. This project demonstrates precision modeling techniques and material workflow.</p>
+                        <div class="tp-tech">
+                            <span class="tech-tag">Modeling</span>
+                            <span class="tech-tag">Texturing</span>
+                            <span class="tech-tag">Lighting</span>
+                        </div>
+                        <div class="tp-actions">
+                            <button class="action-btn view-render" data-type="image" data-src="https://raw.githubusercontent.com/lakhalseif19/lakhalseif19.github.io/main/tp1/tablerender.png">
+                                <i class="fas fa-image"></i>
+                                View Render
+                            </button>
+                            <button class="action-btn view-github" data-repo="https://github.com/lakhalseif19/lakhalseif19.github.io/tree/main/tp1">
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                            </button>
+                            <button class="action-btn download-project" data-repo="tp1" data-project="TP1 - Modern Table">
+                                <i class="fas fa-download"></i>
+                                Download Project
+                            </button>
+                            <button class="action-btn view-report" data-repo="tp1" data-project="TP1 - Modern Table" data-file="https://raw.githubusercontent.com/lakhalseif19/lakhalseif19.github.io/main/tp1/raport.pdf">
+                                <i class="fas fa-file-pdf"></i>
+                                View Report
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TP 2 - Robot Scene -->
+                <div class="tp-card">
+                    <div class="tp-header">
+                        <div class="tp-number">TP 2</div>
+                        <div class="tp-badge">Robot Scene</div>
+                    </div>
+                    <div class="tp-image">
+                        <img src="https://raw.githubusercontent.com/lakhalseif19/lakhalseif19.github.io/main/tp2/robotrender.png" alt="Robot Scene" onerror="handleImageError(this)">
+                    </div>
+                    <div class="tp-content">
+                        <h3>Robot Character Scene</h3>
+                        <p>Complete character pipeline from sculpting to rigging and animation in Blender. Features advanced rigging and animation techniques.</p>
+                        <div class="tp-tech">
+                            <span class="tech-tag">Sculpting</span>
+                            <span class="tech-tag">Rigging</span>
+                            <span class="tech-tag">Animation</span>
+                        </div>
+                        <div class="tp-actions">
+                            <button class="action-btn view-render" data-type="video" data-src="https://raw.githubusercontent.com/lakhalseif19/lakhalseif19.github.io/main/tp2/robotrender.mp4">
+                                <i class="fas fa-video"></i>
+                                View Animation
+                            </button>
+                            <button class="action-btn view-github" data-repo="https://github.com/lakhalseif19/lakhalseif19.github.io/tree/main/tp2">
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                            </button>
+                            <button class="action-btn download-project" data-repo="tp2" data-project="TP2 - Robot Character">
+                                <i class="fas fa-download"></i>
+                                Download Project
+                            </button>
+                            <button class="action-btn view-report" data-repo="tp2" data-project="TP2 - Robot Character" data-file="https://raw.githubusercontent.com/lakhalseif19/lakhalseif19.github.io/main/tp2/raport2.pdf">
+                                <i class="fas fa-file-pdf"></i>
+                                View Report
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TP 3 - Vehicle -->
+                <div class="tp-card">
+                    <div class="tp-header">
+                        <div class="tp-number">TP 3</div>
+                        <div class="tp-badge">Vehicle</div>
+                    </div>
+                    <div class="tp-image">
+                        <img src="https://raw.githubusercontent.com/lakhalseif19/lakhalseif19.github.io/main/tp3/vehicle-render.png" alt="Vehicle Model" onerror="handleImageError(this)">
+                    </div>
+                    <div class="tp-content">
+                        <h3>Futuristic Vehicle</h3>
+                        <p>Hard-surface modeling of a sci-fi vehicle with procedural materials and advanced shading techniques. Complex geometry and realistic materials.</p>
+                        <div class="tp-tech">
+                            <span class="tech-tag">Hard Surface</span>
+                            <span class="tech-tag">Shading</span>
+                            <span class="tech-tag">Procedural</span>
+                        </div>
+                        <div class="tp-actions">
+                            <button class="action-btn view-render" data-type="image" data-src="https://raw.githubusercontent.com/lakhalseif19/lakhalseif19.github.io/main/tp3/vehicle-render.png">
+                                <i class="fas fa-image"></i>
+                                View Render
+                            </button>
+                            <button class="action-btn view-github" data-repo="https://github.com/lakhalseif19/lakhalseif19.github.io/tree/main/tp3">
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                            </button>
+                            <button class="action-btn download-project" data-repo="tp3" data-project="TP3 - Futuristic Vehicle">
+                                <i class="fas fa-download"></i>
+                                Download Project
+                            </button>
+                            <button class="action-btn view-report" data-repo="tp3" data-project="TP3 - Futuristic Vehicle" data-file="https://raw.githubusercontent.com/lakhalseif19/lakhalseif19.github.io/main/tp3/raport.pdf">
+                                <i class="fas fa-file-pdf"></i>
+                                View Report
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TP 4 - Particle System -->
+                <div class="tp-card">
+                    <div class="tp-header">
+                        <div class="tp-number">TP 4</div>
+                        <div class="tp-badge">VFX</div>
+                    </div>
+                    <div class="tp-image">
+                        <img src="https://raw.githubusercontent.com/lakhalseif19/lakhalseif19.github.io/main/tp4/particle-effects.png" alt="Particle Effects" onerror="handleImageError(this)">
+                    </div>
+                    <div class="tp-content">
+                        <h3>Particle System</h3>
+                        <p>Advanced particle effects and dynamic simulations for visual storytelling. Complex particle systems and physics simulations.</p>
+                        <div class="tp-tech">
+                            <span class="tech-tag">Particles</span>
+                            <span class="tech-tag">Simulation</span>
+                            <span class="tech-tag">VFX</span>
+                        </div>
+                        <div class="tp-actions">
+                            <button class="action-btn view-render" data-type="video" data-src="https://raw.githubusercontent.com/lakhalseif19/lakhalseif19.github.io/main/tp4/particle-effects.mp4">
+                                <i class="fas fa-video"></i>
+                                View Effects
+                            </button>
+                            <button class="action-btn view-github" data-repo="https://github.com/lakhalseif19/lakhalseif19.github.io/tree/main/tp4">
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                            </button>
+                            <button class="action-btn download-project" data-repo="tp4" data-project="TP4 - Particle System">
+                                <i class="fas fa-download"></i>
+                                Download Project
+                            </button>
+                            <button class="action-btn view-report" data-repo="tp4" data-project="TP4 - Particle System" data-file="https://raw.githubusercontent.com/lakhalseif19/lakhalseif19.github.io/main/tp4/raport.pdf">
+                                <i class="fas fa-file-pdf"></i>
+                                View Report
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services-section">
+        <div class="background-decoration">
+            <div class="decoration-circle circle-1"></div>
+            <div class="decoration-circle circle-2"></div>
+            <div class="decoration-circle circle-3"></div>
+        </div>
+        
+        <div class="heading-container">
+            <h2 class="heading">My <span>Services</span></h2>
+            <p class="services-subtitle">Professional 3D design and development services to bring your creative visions to life</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class='bx bx-cube'></i>
+                </div>
+                <h3>3D Modeling & Design</h3>
+                <p>Create stunning 3D models, characters, and environments using Blender and industry-standard tools.</p>
+                <ul class="service-features">
+                    <li>High-poly & low-poly modeling</li>
+                    <li>Character design & sculpting</li>
+                    <li>Environment creation</li>
+                </ul>
+                <div class="service-pricing">
+                    <div class="price">$75 <span>/ hour</span></div>
+                    <a href="#contact" class="service-btn">Get Quote</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class='bx bx-movie-play'></i>
+                </div>
+                <h3>3D Animation</h3>
+                <p>Bring your 3D models to life with professional animation services including character rigging.</p>
+                <ul class="service-features">
+                    <li>Character rigging & skinning</li>
+                    <li>Keyframe animation</li>
+                    <li>Motion graphics</li>
+                </ul>
+                <div class="service-pricing">
+                    <div class="price">$90 <span>/ hour</span></div>
+                    <a href="#contact" class="service-btn">Get Quote</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class='bx bx-palette'></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Design intuitive and beautiful user interfaces with a focus on user experience.</p>
+                <ul class="service-features">
+                    <li>User interface design</li>
+                    <li>User experience research</li>
+                    <li>Wireframing & prototyping</li>
+                </ul>
+                <div class="service-pricing">
+                    <div class="price">$65 <span>/ hour</span></div>
+                    <a href="#contact" class="service-btn">Get Quote</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>Ready to Start Your Project?</h3>
+            <p>Let's discuss how we can bring your ideas to life with professional 3D design services</p>
+            <a href="#contact" class="cta-btn">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="background-decoration">
+            <div class="decoration-circle circle-1"></div>
+            <div class="decoration-circle circle-2"></div>
+            <div class="decoration-circle circle-3"></div>
+        </div>
+        
+        <div class="heading-container">
+            <h2 class="heading">Get In <span>Touch</span></h2>
+            <p class="contact-subtitle">Ready to bring your ideas to life? Get in touch and let's discuss your next project</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info-card">
+                <div class="info-header">
+                    <div class="info-icon-main">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <div class="info-header-text">
+                        <h2>Contact Information</h2>
+                        <p>Multiple ways to reach me</p>
+                    </div>
+                </div>
+                
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p>contact@seifelislam.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Phone</h3>
+                            <p>+216 12 345 678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Location</h3>
+                            <p>Setif, Algeria</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Response Time</h3>
+                            <p>Within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-cards-section">
+                <div class="social-header">
+                    <h2>Connect With Me</h2>
+                    <p>Follow my work and get in touch through social platforms</p>
+                </div>
+                
+                <div id="cards">
+                    <div class="card">
+                        <div class="card-content">
+                            <i class="fa-brands fa-linkedin card-icon"></i>
+                            <h2>LinkedIn</h2>
+                            <p>Professional network and career updates</p>
+                            <a href="https://www.linkedin.com/in/seif-el-islam-lakhal-4b1b4b1b4/" target="_blank" class="card-link">Connect</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <i class="fa-brands fa-github card-icon"></i>
+                            <h2>GitHub</h2>
+                            <p>Explore my code and development projects</p>
+                            <a href="https://github.com/lakhalseif19" target="_blank" class="card-link">Follow</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <i class="fa-brands fa-instagram card-icon"></i>
+                            <h2>Instagram</h2>
+                            <p>Behind the scenes and creative process</p>
+                            <a href="https://www.instagram.com/seif_el_islam_lakhal/" target="_blank" class="card-link">Follow</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <i class="fa-brands fa-artstation card-icon"></i>
+                            <h2>ArtStation</h2>
+                            <p>My 3D artwork and digital creations</p>
+                            <a href="#" class="card-link">View Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="availability-banner">
+            <h3>Available for Freelance Projects</h3>
+            <p>I'm currently accepting new clients for 3D modeling, animation, and design work</p>
+        </div>
+    </section>
+
+    <!-- Render Modal -->
+    <div class="render-modal" id="renderModal">
+        <div class="modal-container">
+            <button class="close-btn" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3 id="modalTitle">Project Render</h3>
+            </div>
+            <div class="modal-content">
+                <div id="modalMedia">
+                    <!-- Content will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
