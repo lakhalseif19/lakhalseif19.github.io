@@ -378,12 +378,13 @@ function closeRender() {
 
 // Project Download Functions
 function downloadProject(repoName, projectName, zipUrl) {
-    showNotification(`Downloading ${projectName}...`, 'info');
+    showNotification(`Starting download for ${projectName}...`, 'info');
     
     // Create a temporary link to trigger the download
     const link = document.createElement('a');
     link.href = zipUrl;
-    link.download = `${projectName}.blend`;
+    link.download = `${projectName}.zip`;
+    link.target = '_blank';
     
     // Append to the document, click it, and remove it
     document.body.appendChild(link);
@@ -392,7 +393,7 @@ function downloadProject(repoName, projectName, zipUrl) {
     
     // Show success notification after a short delay
     setTimeout(() => {
-        showNotification(`${projectName} download started!`, 'success');
+        showNotification(`${projectName} download started! The repository will download as a ZIP file.`, 'success');
     }, 1000);
 }
 
