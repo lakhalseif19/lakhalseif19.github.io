@@ -398,8 +398,8 @@ function downloadProject(repoName, projectName, zipUrl) {
 }
 
 function viewReport(repoName, projectName, fileUrl) {
-    // Open the PDF in a new tab directly from GitHub
-    showNotification(`Opening report for ${projectName}...`, 'info');
+    // Open the PDF in GitHub's viewer instead of downloading
+    showNotification(`Opening report for ${projectName} in GitHub viewer...`, 'info');
     window.open(fileUrl, '_blank');
 }
 
